@@ -1,0 +1,229 @@
+#datetime {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.btn-disabled:hover::after {
+    opacity: 1; /* Show the tooltip on hover */
+}
+
+.contactus-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items at the top */
+    flex-wrap: wrap;
+}
+.contact-image {
+    flex: 1;
+    text-align: center;
+}
+.contact-image img {
+    max-width: 100%;
+    height: auto;
+}
+.contact-info {
+    flex: 1;
+    padding: 20px;
+    margin-left: 20px; /* Add margin here to create the gap */
+}
+.contact-line {
+    height: 1px;
+    background-color: #dee2e6;
+    margin: 10px 0;
+}
+.contact-info ul {
+    padding: 0;
+}
+.contact-info p {
+    margin: 0 0 10px;
+}
+.contact-info li {
+    list-style: none;
+}
+
+/* index page project css and skill css start */
+
+    /* Container styling */
+    .portfolio-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem; /* Adjust the gap between items as needed */
+    }
+
+    /* Portfolio item styling */
+    .portfolio-item {
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Image styling */
+    .portfolio-item img {
+        width: 100%;
+        height: 260px; /* Ensure images are of consistent height */
+        object-fit: cover; /* Adjusts the image to cover the container while maintaining aspect ratio */
+    }
+
+    /* Hover effect */
+    .portfolio-item:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /*Adds shadow on hover*/
+        background-color: rgba(11, 206, 175, 1); /* Adds a slight background color effect behind the image */
+    }
+
+
+    /* Overlay styling */
+    .portfolio-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6); /* Dark semi-transparent overlay */
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Show overlay on hover */
+    .portfolio-item:hover .portfolio-overlay {
+        opacity: 1;
+    }
+
+    /* Content inside the overlay */
+    .portfolio-content h4 {
+        font-size: 1.5rem;
+        color: #fff;
+        margin-bottom: 10px;
+    }
+
+    .portfolio-content p {
+        font-size: 1rem;
+        color: #fff;
+        margin-bottom: 20px;
+    }
+
+    .portfolio-content .btn {
+        font-size: 0.875rem;
+        border: 2px solid #fff;
+        color: #fff;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .portfolio-content .btn:hover {
+        background-color: #fff;
+        color: #000;
+    }
+
+    .skill {
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+    }
+    .skill-icon {
+        font-size: 2rem;
+        margin-right: 1rem;
+    }
+    .progress-bar {
+        transition: width 1s ease-in-out;
+    }
+    .progress {
+        flex-grow: 1;
+    }
+
+    /* experience section start*/
+
+    /* Ensure heading scales properly on different screen sizes */
+    @media (max-width: 576px) {
+    .responsive-heading {
+        font-size: 3.2rem; /* Adjust the size for extra small devices */
+    }
+    }
+
+    @media (min-width: 576px) and (max-width: 768px) {
+    .responsive-heading {
+        font-size: 4rem; /* Adjust the size for small devices */
+    }
+    }
+
+    @media (min-width: 768px) and (max-width: 992px) {
+    .responsive-heading {
+        font-size: 6rem; /* Adjust the size for medium devices */
+    }
+    }
+
+    @media (min-width: 992px) {
+    .responsive-heading {
+        font-size: 8rem; /* Adjust the size for large devices */
+    }
+    }
+
+    /* Optional: Ensure heading doesn't overflow container */
+    @media (max-width: 576px) {
+    .responsive-heading {
+        overflow-wrap: break-word; /* Breaks long words if necessary */
+        word-break: break-word; /* Prevents overflow */
+    }
+    }
+
+    /*experience section end*/
+
+
+    /* achievement section start*/
+
+        /* Custom Breakpoints for Heading */
+    @media (max-width: 576px) {
+        .custom-heading {
+            font-size: 3.1rem; /* Smaller size for extra small devices */
+        }
+    }
+
+    @media (min-width: 576px) and (max-width: 768px) {
+        .custom-heading {
+            font-size: 4rem; /* Medium size for small devices */
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 992px) {
+        .custom-heading {
+            font-size: 6rem; /* Larger size for medium devices */
+        }
+    }
+
+    @media (min-width: 992px) {
+        .custom-heading {
+            font-size: 8rem; /* Default size for large devices */
+        }
+    }
+
+    /* Optional: Adjust certificate boxes */
+    @media (max-width: 576px) {
+        .bg-white {
+            padding: 2rem; /* Reduce padding on extra small screens */
+        }
+    }
+
+    @media (min-width: 576px) and (max-width: 768px) {
+        .bg-white {
+            padding: 2.5rem; /* Adjust padding on small screens */
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 992px) {
+        .bg-white {
+            padding: 3rem; /* Adjust padding on medium screens */
+        }
+    }
+
+    @media (min-width: 992px) {
+        .bg-white {
+            padding: 4rem; /* Adjust padding on large screens */
+        }
+    }
+
+    /* achievement section end*/
+
