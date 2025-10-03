@@ -25,28 +25,173 @@
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 
-         <!-- bootstrap icon-->
-         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- bootstrap icon-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- custom style css -->
+    <link rel="stylesheet" href="./css/custom-style.css">
+
+     <style>
+               /* ============================================
+           ROOT VARIABLES & GLOBAL STYLES
+           ============================================ */
+        :root {
+            --primary-color: #20c997;
+            --secondary-color: #6c757d;
+            --dark-color: #343a40;
+            --light-color: #f8f9fa;
+            --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 5px 20px rgba(0, 0, 0, 0.12);
+            --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ============================================
+           PAGE HEADER SECTION
+           ============================================ */
+        .page-header {
+            padding: 100px 0 60px;
+            background: linear-gradient(-45deg, #0d1f1a, #0f2720, #134d3a, #0d1f1a);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(32, 201, 151, 0.1), transparent);
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .header-title-large {
+            font-size: clamp(4rem, 12vw, 8rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            -webkit-text-stroke: 2px rgba(255, 255, 255, 0.3);
+            color: transparent;
+            margin-bottom: 0;
+            line-height: 1;
+        }
+
+        .header-title-overlay {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--primary-color);
+            margin-top: -20px;
+            letter-spacing: 3px;
+        }
+
+        .header-divider {
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #20c997, #17a589);
+            margin: 30px auto;
+            border-radius: 2px;
+        }
+
+        /* ============================================
+           BACK BUTTON
+           ============================================ */
+        .back-button-section {
+            text-align: center;
+            padding: 40px 0 60px;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 15px 40px;
+            background: transparent;
+            color: var(--dark-color);
+            border: 2px solid var(--dark-color);
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background: var(--dark-color);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(52, 58, 64, 0.3);
+            text-decoration: none;
+        }
+
+        .back-btn i {
+            transition: transform 0.3s ease;
+        }
+
+        .back-btn:hover i {
+            transform: translateX(-5px);
+        }
+    </style>
 
 </head>
 
 <body>
 
+    <!-- Project Title Section -->
+<div class="page-header" id="portfolio">
+  <div class="container">
+    <div class="header-content">
+      <!-- Large background-stroke text -->
+      <h1 class="header-title-large">About</h1>
+
+      <!-- Overlay title -->
+      <h2 class="header-title-overlay">About Me</h2>
+
+      <!-- Divider -->
+      <div class="header-divider"></div>
+    </div>
+  </div>
+</div>
+
+<br>
 
  <!-- About Start -->
  <div class="container-fluid py-5" id="about">
     <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <!-- Adjust the display size based on screen width -->
-                <h1 class="display-1 text-uppercase text-white d-none d-md-block" style="-webkit-text-stroke: 1px #dee2e6;">About</h1>
-                <h1 class="display-4 text-uppercase text-white d-block d-md-none" style="-webkit-text-stroke: 1px #dee2e6;">About</h1>
-                <h1 class="position-absolute text-uppercase text-primary">About Me</h1>
-            </div>
-
-             <!-- Horizontal line -->
-             <hr style="border-color: #6f7a84;">
-             <br>
-        
         <div class="row align-items-start">
             <div class="col-lg-5 pb-4 pb-lg-0">
                 <img class="img-fluid rounded w-100" src="img/Gemini_Generated_Image_my-profile.PNG" alt="">
@@ -111,7 +256,13 @@
                 <br>
                 <br>
             </div>
-            <a href="index.html" class="btn btn-outline-dark px-4 py-2"><i class="fas fa-arrow-left mr-2"></i>Back</a>
+            <!-- <a href="index.html" class="btn btn-outline-dark px-4 py-2"><i class="fas fa-arrow-left mr-2"></i>Back</a> -->
+             <!-- Back to Home Button -->
+            <div class="back-button-section">
+                <a href="../index.html" class="back-btn">
+                    <i class="fas fa-arrow-left"></i> Back
+                </a>
+            </div>
         </div>
     </div>
 </div>
