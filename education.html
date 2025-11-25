@@ -4,12 +4,15 @@
 <head>
     <meta charset="utf-8">
     <title>MY Portfolio</title>
+     <!-- Favicon Links -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
-
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -30,6 +33,7 @@
 
     <!-- Custom Stylesheets -->
     <link href="css/custom-style.css" rel="stylesheet">
+    <link href="./css/custom-darkmode-style.css" rel="stylesheet">
 
     <style>
                /* ============================================
@@ -417,6 +421,12 @@
 <!-- Bootstrap Bundle with Popper -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 
+ <!-- Dark Mode Toggle -->
+    <button onclick="toggleDarkMode()" style="position: fixed; bottom: 30px; right: 30px; width: 50px; height: 50px; border-radius: 50%; background: var(--primary-color); border: none; color: white; font-size: 1.2rem; cursor: pointer; z-index: 9999; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+        <i class="fas fa-moon"></i>
+    </button>
+
+  <script src="./js/darkmode.js"></script>
 
 </body>
 
